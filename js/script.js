@@ -7,27 +7,36 @@ function User(name, email, phone, password) {
     
 }
 
-const fetchUser = async (id) => {
-    const APIResponse = await fetch(`http://localhost:8080/users/${id}`);
+const productContainer = document.querySelector('.product-container');
+
+const getAllProducts = async () => {
+    const APIResponse = await fetch(`http://localhost:8080/products/`);
     const data = await APIResponse.json();
-    return data;
+
+    data.map((product) => {
+
+        const div = document.createElement('div')
+        const name = document.createElement('h2')
+        const price = document.createElement('p')
+        const imgUrl = document.createElement('img')
+
+        name.innerText = product.name;
+        price.innerText = product.price;
+        imgUrl.innerText = product.imgUrl;
+
+        div.appendChild(name);
+        div.appendChild(price);
+        div.appendChild(imgUrl);
+
+        productContainer.appendChild(div);
+
+    })
 }
 
 const userFindById = async (id) => {
+    const data = await fetch(`http://localhost:8080/products/${id}`);
+    const user = new User(data.name, data.email, data.phone, data.password);
+    return user;
+}
 
-    const data = await fetchUser(id);
-
-    const user = new User();
-
-    user.name = data.name;
-    user.email = data.email;
-    user.phone = data.phone;
-    user.password = data.password;
-
-    console.log(user);
-} 
-
-userFindById(1);
-
-
-
+getAllProducts();

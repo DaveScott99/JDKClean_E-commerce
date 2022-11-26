@@ -4,32 +4,212 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-    <form name="newRegistry">
+    <header>
 
-        <div class="form-control">
-            <input name="name" id="cep"  class="form-input" type="text" placeholder="Nome">
-        </div>
-        <div class="form-control">
-            <input name="email" id="email" class="form-input" type="text" placeholder="Email">
-        </div>
-        <div class="form-control"> 
-            <input name="phone" id="phone" class="form-input" type="text" placeholder="Celular">
-        </div>
-        <div class="form-control">
-            <input name="password" id="password" class="form-input" type="text" placeholder="Senha">
+        <div class="content">
+            <nav>
+                <p class="brand"><strong>Store</strong></p>
+
+                <ul>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <button>Login</button>
+                </ul>
+            </nav>
+
+            <div class="header-block">
+                <div class="text">
+                    <h2>The best products for you</h2>
+                    <p>Lorem ipsum</p>
+                </div>
+                <img src="./imgs/imacs.png" alt="product">
+            </div>
+
         </div>
 
-        <div class="btn-container">
-            <button name="btnRegistry" class="btn" type="submit">Registrar</button>
+    </header>
+
+    <section class="product-container" id="product-section">
+
+        <div class="content">
+
+            <div class="title-wrapper-catalog">
+                <p>Find want you want</p>
+                <h2>Catalog</h2>
+            </div>
+
+            <div class="filter-card">
+                <input type="text" class="search-input" placeholder="Choose your favorite product">
+                <button class="search-button">Search</button>
+            </div>
+
+            <div class="card-wrapper">
+
+                <div class="card-item">
+                    <img src="https://cdn.pixabay.com/photo/2020/06/26/12/21/macbook-pro-5342546_960_720.png" alt="product">
+                    <div class="card-content">
+                        <h4>Macbook Pro</h4>
+                        <p>R$ 2000.00</p>
+                        <button type="button">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://cdn.pixabay.com/photo/2020/06/26/12/21/macbook-pro-5342546_960_720.png" alt="product">
+                    <div class="card-content">
+                        <h4>Macbook Pro</h4>
+                        <p>R$ 2000.00</p>
+                        <button type="button">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://cdn.pixabay.com/photo/2020/06/26/12/21/macbook-pro-5342546_960_720.png" alt="product">
+                    <div class="card-content">
+                        <h4>Macbook Pro</h4>
+                        <p>R$ 2000.00</p>
+                        <button type="button">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://cdn.pixabay.com/photo/2020/06/26/12/21/macbook-pro-5342546_960_720.png" alt="product">
+                    <div class="card-content">
+                        <h4>Macbook Pro</h4>
+                        <p>R$ 2000.00</p>
+                        <button type="button">Comprar</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </section>
+  
+    <section class="about" id="about">
+
+        <div class="content">
+            <div class="title-wrapper-about">
+                <p>Know about us</p>
+                <h2><strong>About</strong></h2>
+            </div>
+            <div class="about-content">
+                <div class="left">
+                    <img src="./imgs/about 1.png" alt="about">
+                </div>
+                <div class="right">
+                    <h3>Store of technology</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Odit, accusantium, vel neque saepe ea voluptatibus ipsum 
+                        distinctio voluptates possimus deleniti iste molestias? 
+                        Odio error fugit culpa nostrum dolore id, tenetur beatae 
+                        sit quasi tempore accusantium eius totam quas. Aliquam veniam 
+                        harum vero sed debitis ad, porro animi quibusdam et exercitationem 
+                        libero minus odio molestiae maiores minima! Labore, sit. Nulla 
+                        possimus sequi repellat cum eius dolores, illum fuga delectus 
+                        consequuntur, dignissimos alias quibusdam praesentium a facere 
+                        vitae unde excepturi laudantium aliquid architecto magni maiores 
+                        beatae vero. Tempore eaque assumenda facere quidem cupiditate tenetur 
+                        saepe vero esse perspiciatis, sunt provident voluptates cumque.</p>
+                </div>
+            </div>
         </div>
 
-    </form>
+    </section>
 
-    <script src="./js/script.js"></script>
+    <section class="features" id="features">
+        <div class="content">
+            <div class="title-wrapper-features">
+                <p>What you can do</p>
+                <h2><strong>Features</strong></h2>
+            </div>
+        </div>
+
+        <div class="feature-card-block">
+            <div class="feature-card-item">
+                <img src="./imgs/feature-planet 1.png" alt="feature">
+                <div class="feature-text-content">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="feature-card-item">
+                <img src="./imgs/feature-planet 1.png" alt="feature">
+                <div class="feature-text-content">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="feature-card-item">
+                <img src="./imgs/feature-planet 1.png" alt="feature">
+                <div class="feature-text-content">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="feature-card-item">
+                <img src="./imgs/feature-planet 1.png" alt="feature">
+                <div class="feature-text-content">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="feature-card-item">
+                <img src="./imgs/feature-planet 1.png" alt="feature">
+                <div class="feature-text-content">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="feature-card-item">
+                <img src="./imgs/feature-planet 1.png" alt="feature">
+                <div class="feature-text-content">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="main">
+            <div class="content footer-links">
+                <div class="footer-company">
+                    <h4>Company</h4>
+                    <h6>About</h6>
+                    <h6>Contact</h6>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Stay connected</h4>
+                    <div class="social-icons">
+                        <img src="./imgs/instagram.png" alt="instagram">
+                        <img src="./imgs/facebook.png" alt="facebook">
+                    </div>
+                </div>
+    
+                <div class="footer-contact">
+                    <h4>Contact US</h4>
+                    <h6>+55 11 99049-5532</h6>
+                    <h6>contato@store.com</h6>
+                    <h6>Rua 1000, São Paulo SP</h6>
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            DaviSantos 2022.
+        </div>
+    </footer>
+
+    <!--<script src="./js/script.js"></script>-->
     
 </body>
 </html>
