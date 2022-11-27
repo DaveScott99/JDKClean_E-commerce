@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="./css/cadastro.css">
+</head>
+<body>
+
+    <section id="form-section" class="form-container">
+
+        <div class="card-form">
+
+            <form name="newRegistry">
+
+                <div class="form-control">
+                    <label for="name">Nome:</label>
+                    <input name="name" id="name" class="form-input" type="text" placeholder="Nome">
+                </div>
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input name="email" id="email" class="form-input" type="email" placeholder="Email">
+                </div>
+                <div class="form-control"> 
+                    <label for="password">Senha:</label>
+                    <input name="password" id="password" class="form-input" type="text" placeholder="Senha">
+                    <div class="error-message" data-error="number"></div>
+                </div>
+                <div class="form-control">
+                    <label for="phone">Celular:</label>
+                    <input name="phone" id="phone" class="form-input" type="text" placeholder="Celular">
+                </div>
+    
+                <div class="btn-container">
+                    <button name="btnRegistry" class="btn" type="submit">Registrar</button>
+                </div>
+    
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>

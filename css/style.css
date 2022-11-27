@@ -223,15 +223,17 @@ section .card-item {
 
 .card-item h4 {
     width: 100%;
+    text-align: center;
 }
 
 .card-item p {
-    width: 90%;
+    width: 100%;
+    text-align: center;
     color: #000;
 }
 
 .card-item button {
-    width: 100%;
+    width: 200px;
     padding: 10px;
     border: none;
     background: var(--blue);
