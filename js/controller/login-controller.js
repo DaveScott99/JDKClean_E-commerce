@@ -63,8 +63,9 @@ function handleBtnLoginClick(event) {
         })
     }
     else {
-        console.log(state.userLogin);
-        clearForm();
+        if (loginSevice.validateUser(state.userLogin)) {
+            console.log("Autenticado")
+        }
     }
 }
 
