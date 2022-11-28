@@ -1,3 +1,3 @@
-import * as formController from './controller/form-controller.js'
+import * as formController from './controller/registry-controller.js'
 
 formController.init();

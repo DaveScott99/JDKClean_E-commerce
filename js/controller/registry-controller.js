@@ -1,5 +1,6 @@
 import User from '../models/User.js';
 import * as userService from '../services/user-service.js';
+import * as pageController from './page-controller.js'
 
 function State() {
 
@@ -46,6 +47,8 @@ export function init() {
     state.inputPhone.addEventListener('keyup', handleInputPhoneKeyup);
 
     state.btnRegistry.addEventListener('click', handleBtnRegistryClick);
+
+    pageController.init();
 
 }
 

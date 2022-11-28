@@ -12,37 +12,48 @@
 
     <section id="form-section" class="form-container">
 
+        <img src="#" alt="Logo" class="login_logo">
+
+        <h1 class="login_title">Fazer login</h1>
+
         <div class="card-form">
 
             <form name="newRegistry">
 
                 <div class="form-control">
-                    <label for="name">Nome:</label>
-                    <input name="name" id="name" class="form-input" type="text" placeholder="Nome">
-                    <div class="error-message" data-error="name"></div>
+                    <label for="name" class="login_label">
+                        <span>Nome</span> 
+                        <input name="name" id="name" class="form-input" type="text">
+                        <div class="error-message" data-error="name"></div>
+                    </label>
                 </div>
                 <div class="form-control">
-                    <label for="email">Email:</label>
-                    <input name="email" id="email" class="form-input" type="email" placeholder="Email">
-                    <div class="error-message" data-error="email"></div>
+                    <label for="email" class="login_label">
+                        <span>Email</span> 
+                        <input name="email" id="email" class="form-input" type="email">
+                        <div class="error-message" data-error="email"></div>
+                    </label>
                 </div>
                 <div class="form-control"> 
-                    <label for="password">Senha:</label>
-                    <input name="password" id="password" class="form-input" type="text" placeholder="Senha">
-                    <div class="error-message" data-error="number"></div>
-                    <div class="error-message" data-error="password"></div>
+                    <label for="password" class="login_label">
+                        <span>Senha</span> 
+                        <input name="password" id="password" class="form-input" type="text">
+                        <div class="error-message" data-error="password"></div>
+                    </label>
                 </div>
                 <div class="form-control">
-                    <label for="phone">Celular:</label>
-                    <input name="phone" id="phone" class="form-input" type="text" placeholder="Celular">
-                    <div class="error-message" data-error="phone"></div>
+                    <label for="phone" class="login_label">
+                        <span>Celular</span> 
+                        <input name="phone" id="phone" class="form-input" type="text">
+                        <div class="error-message" data-error="phone"></div>
+                    </label>
                 </div>
     
                 <div class="btn-container">
                     <button name="btnRegistry" class="btn" type="submit">Registrar</button>
                 </div>
 
-                <p><a href="./login.html">Logar</a></p>
+                <a href="./login.html" class="login_link">Logar</a>
     
             </form>
 

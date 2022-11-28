@@ -8,29 +8,88 @@
 }
 
 :root {
+  --white: #fff;
+  --whitesmoke: #f9f9f9;
+  --light-grey: #ececec;
+  --medium-gray: #a7a7a7;
+  --deep-gray: #343434;
+  --black: #000000;
   --orange: #ff9100;
-  --blue: #00285f;
-  --gray: #ededed;
+  --blue: #1b77f3;
+  --red: #cf3c3f;
+  --gray: #c4c4c4;
 }
-
 body,
 html {
   width: 100%;
   overflow-x: hidden;
   background: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 .form-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  justify-content: center;
+  padding: clamp(35px, 8%, 70px);
   width: 100%;
-  height: 100vh;
+  max-width: 500px;
+  min-height: 100vh;
+}
+
+.login_logo {
+  width: 130px;
+  margin-bottom: 80px;
+}
+
+.login_title {
+  color: var(--deep-gray);
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.login_label {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.login_label span {
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--medium-gray);
+  margin: 20px;
+  cursor: text;
+  transition: all 200ms ease;
+}
+
+.login_label .span-active {
+  font-size: 0.7em;
+  margin: 8px 10px;
+}
+
+.form-input {
+  width: 100%;
+  background-color: var(--light-grey);
+  color: var(--deep-gray);
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 25px 10px 10px;
+  font-size: 0.9em;
+  font-weight: 600;
+  outline: none;
+}
+
+.form-input:focus {
+  background-color: var(--whitesmoke);
+  border: 2px solid var(--deep-gray);
 }
 
 .card-form {
-  background: var(--orange);
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
@@ -38,34 +97,9 @@ html {
   padding: 20px;
 }
 
-.form-control {
-  margin-bottom: 20px;
-}
-
-.form-control label {
-  display: none;
-}
-
 .error-message {
   margin-top: 5px;
   color: var(--blue);
-}
-
-.form-input {
-  height: 50px;
-  width: 100%;
-  border-radius: 4px;
-  padding: 0 20px;
-  font-size: 14px;
-  border: 0;
-}
-
-.form-input::placeholder {
-  color: #c9c9c9;
-}
-
-.form-input:disabled {
-  background-color: #ddd;
 }
 
 .btn-container {
@@ -91,12 +125,14 @@ html {
   color: white;
 }
 
-p {
-  text-align: center;
-  margin-top: 10px;
-}
-
-p a {
+.login_link {
+  font-size: 0.8em;
   text-decoration: none;
-  color: var(--blue);
+  color: var(--medium-gray);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+  display: block;
 }

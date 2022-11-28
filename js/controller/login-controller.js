@@ -1,0 +1,105 @@
+import * as pageController from './page-controller.js';
+import * as loginSevice from '../services/login-service.js';
+
+function UserLogin(email, password) {
+    this.email = email;
+    this.password = password;
+}
+
+function State() {
+
+    this.userLogin = new UserLogin();
+
+    this.inputEmail = null;
+    this.inputPassword = null;
+
+    this.btnLogin = null;
+
+    this.errorEmail = null;
+    this.errorPassword = null;
+}
+
+const state = new State();
+
+export function init(){
+
+    state.inputEmail = document.forms.newLogin.email;
+    state.inputPassword = document.forms.newLogin.password;
+
+    state.btnLogin = document.forms.newLogin.btnLogin;
+
+    state.errorEmail = document.querySelector('[data-error="email"]');
+    state.errorPassword = document.querySelector('[data-error="password"]');
+
+    state.inputEmail.addEventListener('change', handleInputEmailChange);
+    state.inputPassword.addEventListener('change', handleInputPasswordChange);
+
+    state.inputEmail.addEventListener('keyup', handleInputEmailKeyup);
+    state.inputPassword.addEventListener('keyup', handleInputPasswordKeyup)
+
+    state.btnLogin.addEventListener('click', handleBtnLoginClick)
+
+    pageController.init();
+}
+
+function handleInputEmailKeyup(event) {
+    state.userLogin.email = event.target.value;
+}
+
+function handleInputPasswordKeyup(event) {
+    state.userLogin.password = event.target.value;
+}
+
+function handleBtnLoginClick(event) {
+    event.preventDefault();
+
+    const errors = loginSevice.getErrors(state.userLogin);
+
+    const keys = Object.keys(errors);
+
+    if (keys.length > 0) {
+        keys.forEach(key => {
+            setFormError(key, errors[key]);
+        })
+    }
+    else {
+        console.log(state.userLogin);
+        clearForm();
+    }
+}
+
+function handleInputEmailChange(event) {
+
+    if (event.target.value == "") {
+        setFormError("email", "Campo requerido");
+    }
+    else {
+        setFormError("email", "");
+    }
+
+}
+
+function handleInputPasswordChange(event) {
+
+    if (event.target.value == "") {
+        setFormError("password", "Campo requerido");
+    }
+    else {
+        setFormError("password", "");
+    }
+
+}
+
+function clearForm() {
+    state.inputEmail.value = "";
+    state.inputPassword.value = "";
+
+    state.userLogin = new UserLogin();
+
+    state.inputEmail.focus();
+}
+
+function setFormError(key, value) {
+    const element = document.querySelector(`[data-error="${key}"]`);
+    element.innerHTML = value;
+}

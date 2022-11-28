@@ -1,4 +1,3 @@
-import User from '../models/User.js';
 
 export function createUser(user) {
     fetch(`http://localhost:8080/users/`, {
