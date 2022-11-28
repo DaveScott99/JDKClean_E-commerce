@@ -92,11 +92,12 @@ html {
 }
 
 p {
-  text-align: center;
-  margin-top: 10px;
+
+    text-align: center;
+    margin-top: 10px;
 }
 
 p a {
-  text-decoration: none;
-  color: var(--blue);
+    text-decoration: none;
+    color: var(--blue);
 }

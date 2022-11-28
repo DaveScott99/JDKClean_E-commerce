@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Login</title>
 
-    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
+    
 
     <section id="form-section" class="form-container">
 
@@ -16,11 +17,6 @@
 
             <form name="newRegistry">
 
-                <div class="form-control">
-                    <label for="name">Nome:</label>
-                    <input name="name" id="name" class="form-input" type="text" placeholder="Nome">
-                    <div class="error-message" data-error="name"></div>
-                </div>
                 <div class="form-control">
                     <label for="email">Email:</label>
                     <input name="email" id="email" class="form-input" type="email" placeholder="Email">
@@ -32,17 +28,11 @@
                     <div class="error-message" data-error="number"></div>
                     <div class="error-message" data-error="password"></div>
                 </div>
-                <div class="form-control">
-                    <label for="phone">Celular:</label>
-                    <input name="phone" id="phone" class="form-input" type="text" placeholder="Celular">
-                    <div class="error-message" data-error="phone"></div>
-                </div>
-    
                 <div class="btn-container">
-                    <button name="btnRegistry" class="btn" type="submit">Registrar</button>
+                    <button name="btnLogin" class="btn" type="submit">Logar</button>
                 </div>
 
-                <p><a href="./login.html">Logar</a></p>
+                <p><a href="./cadstro.html">Registrar</a></p>
     
             </form>
 
@@ -50,7 +40,7 @@
 
     </section>
 
-    <script type="module" src="./js/registry.js"></script>
-    
+    <script type="module" src="./js/login.js"></script>
+
 </body>
 </html>
