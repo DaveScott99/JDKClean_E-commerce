@@ -28,6 +28,8 @@ export function init(){
 
     state.btnLogin = document.forms.newLogin.btnLogin;
 
+    state.errorLogin = document.querySelector('[data-error="login"]');
+
     state.errorEmail = document.querySelector('[data-error="email"]');
     state.errorPassword = document.querySelector('[data-error="password"]');
 
@@ -50,7 +52,7 @@ function handleInputPasswordKeyup(event) {
     state.userLogin.password = event.target.value;
 }
 
-function handleBtnLoginClick(event) {
+async function handleBtnLoginClick(event) {
     event.preventDefault();
 
     const errors = loginSevice.getErrors(state.userLogin);
@@ -63,8 +65,14 @@ function handleBtnLoginClick(event) {
         })
     }
     else {
-        if (loginSevice.validateUser(state.userLogin)) {
-            console.log("Autenticado")
+        const validateUser = await loginSevice.validateUser(state.userLogin);
+        if (validateUser) {
+            console.log("Autenticado");
+            state.errorLogin.style.display = "none";
+        }
+        else {
+            console.log("Não Autenticado");
+            state.errorLogin.style.display = "block";
         }
     }
 }

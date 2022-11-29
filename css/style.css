@@ -8,10 +8,18 @@
 }
 
 :root {
+    --white: #fff;
+    --whitesmoke: #f9f9f9;
+    --light-grey: #ececec;
+    --medium-gray: #a7a7a7;
+    --deep-gray: #343434;
+    --black: #000000;
     --orange: #ff9100;
-    --blue: #00285f;
-    --gray: #ededed;
-}
+    --blue: #1b77f3;
+    --red-light: #ff2c19d8;
+    --red: #FF2E19;
+    --gray: #c4c4c4;
+  }
 
 body, html {
     width: 100%;
@@ -20,13 +28,12 @@ body, html {
 
 header {
     width: 100%;
-    height: 500px;
-    background: var(--orange);
+    background: var(--white);
 }
 
 .content {
-    max-width: 80%;
-    min-width: 20%;
+    max-width: 1000px;
+    min-width: 300px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -48,9 +55,15 @@ nav {
     cursor: pointer;
 }
 
+.brand span {
+    font-weight: bold;
+    color: var(--medium-gray);
+}
+
 nav ul {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 nav ul li {
@@ -85,51 +98,6 @@ nav ul button:hover {
     color: white;
 }
 
-.content .header-block {
-    max-width: 100%;
-    min-width: 300px;
-    height: 450px;
-    background: var(--blue);
-    border-radius: 5px 5px 0px 0px;
-    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 10;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-.header-block img {
-    width: 50%;
-    position: absolute;
-    left: 45%;
-    bottom: 10%;
-}
-
-.header-block .text {
-    position: absolute;
-    bottom: 30%;
-    left: 15%;
-}
-
-.header-block .text h2 {
-    color: #fff;
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: left;
-    transform: translateX(-130px);
-    transition: transform 1s;
-}
-
-.header-block .text p {
-    max-width: 280px;
-    color: #fff;
-    text-align: right;
-    transform: translateX(-10px);
-    transition: transform 2s;
-}
-
 /* Product Catalog */
 
 section .catalog {
@@ -140,7 +108,7 @@ section .catalog {
 section .filter-card {
     width: 100%;
     height: 150px;
-    background-color: var(--gray);
+    background-color: var(--whitesmoke);
     border-radius: 5px;
     margin: 0 auto;
     display: flex;
@@ -177,7 +145,7 @@ section .filter-card {
 }
 
 .title-wrapper-catalog {
-    margin-top: 200px;
+    margin-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -201,7 +169,7 @@ section .card-wrapper {
 
 section .card-item {
     height: 400px;
-    background: var(--gray);
+    background: var(--whitesmoke);
     border-radius: 5px;
     display: flex;
     flex-direction: column;

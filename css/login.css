@@ -16,7 +16,8 @@
   --black: #000000;
   --orange: #ff9100;
   --blue: #1b77f3;
-  --red: #cf3c3f;
+  --red-light: #ff2c19b0;
+  --red: #FF2E19;
   --gray: #c4c4c4;
 }
 
@@ -38,17 +39,30 @@ html {
   width: 100%;
   max-width: 500px;
   min-height: 100vh;
+
 }
 
 .login_logo {
   width: 130px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .login_title {
   color: var(--deep-gray);
-  font-size: 1.5em;
+  font-size: 2em;
   margin-bottom: 30px;
+}
+
+.error-login{
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  border-radius: 5px;
+  background: var(--red-light);
+  margin-bottom: 20px;
+  transition: all 200ms ease;
+  display: none;
+  color: var(--whitesmoke);
 }
 
 .login_label {
@@ -87,7 +101,7 @@ html {
 
 .form-input:focus {
   background-color: var(--whitesmoke);
-  border: 2px solid var(--deep-gray);
+  border: 2px solid var(--blue);
 }
 
 .card-form {
@@ -100,7 +114,7 @@ html {
 
 .error-message {
   margin-top: 5px;
-  color: var(--blue);
+  color: var(--red);
 }
 
 .btn-container {
