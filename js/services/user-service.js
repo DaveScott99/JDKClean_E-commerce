@@ -1,3 +1,25 @@
+export async function getUserById(id) {
+
+    const APIResponse = await fetch(`http://localhost:8080/users/${id}`)
+    const data = await APIResponse.json();
+    return data;
+}
+
+export async function getAllUsers() {
+
+    const APIResponse = await fetch(`http://localhost:8080/users/`)
+    const data = await APIResponse.json();
+
+    const result = data.map((obj) => {
+        return {
+            id: obj.id,
+            email: obj.email,
+            password: obj.password
+        }
+    })
+
+    return result;
+}
 
 export function createUser(user) {
     fetch(`http://localhost:8080/users/`, {

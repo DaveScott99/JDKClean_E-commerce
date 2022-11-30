@@ -1,12 +1,14 @@
 import * as pageController from './page-controller.js';
 import * as loginSevice from '../services/login-service.js';
+import * as authController from './authentication-controller.js';
 
 function UserLogin(email, password) {
+    this.id = null;
     this.email = email;
     this.password = password;
 }
 
-function State() {
+export function State() {
 
     this.userLogin = new UserLogin();
 
@@ -67,11 +69,12 @@ async function handleBtnLoginClick(event) {
     else {
         const validateUser = await loginSevice.validateUser(state.userLogin);
         if (validateUser) {
-            console.log("Autenticado");
             state.errorLogin.style.display = "none";
+            const id = 'id'
+            localStorage.setItem(id, JSON.stringify(state.userLogin.id));
+            location.href = 'index.html'
         }
         else {
-            console.log("Não Autenticado");
             state.errorLogin.style.display = "block";
         }
     }
@@ -97,15 +100,6 @@ function handleInputPasswordChange(event) {
         setFormError("password", "");
     }
 
-}
-
-function clearForm() {
-    state.inputEmail.value = "";
-    state.inputPassword.value = "";
-
-    state.userLogin = new UserLogin();
-
-    state.inputEmail.focus();
 }
 
 function setFormError(key, value) {

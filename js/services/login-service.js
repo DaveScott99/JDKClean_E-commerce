@@ -1,27 +1,14 @@
-
-async function getAllUsers() {
-
-    const APIResponse = await fetch(`http://localhost:8080/users/`)
-    const data = await APIResponse.json();
-
-    const result = data.map((obj) => {
-        return {
-            email: obj.email,
-            password: obj.password
-        }
-    })
-
-    return result;
-}
+import * as userService from './user-service.js'
 
 export async function validateUser(userLogin) {
 
-    const result = await getAllUsers();
+    const result = await userService.getAllUsers();
 
     var validate = false;
 
     for (var i = 0; i < result.length; i++) {
         if (userLogin.email === result[i].email && userLogin.password === result[i].password) {
+            userLogin.id = result[i].id
             validate = true;
         }
     }

@@ -6,6 +6,7 @@ export function init() {
     inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
 }
 
+// Funções para animação dos inputs
 const handleFocus = ({ target }) => {
     const span = target.previousElementSibling;
     span.classList.add('span-active');
@@ -17,5 +18,3 @@ const handleFocusOut = ({ target }) => {
         span.classList.remove('span-active');
     }
 }
-
-
