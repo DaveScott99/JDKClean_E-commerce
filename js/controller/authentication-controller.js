@@ -26,7 +26,14 @@ export async function init() {
     state.btnProfile = document.querySelector(".profile");
     state.btnLogout = document.querySelector(".logout");
 
+    state.btnProfile.addEventListener('click', handleBtnProfileClick);
     state.btnLogout.addEventListener('click', handleBtnLogoutClick);
+
+    btnLoginState();
+    
+}
+
+function btnLoginState() {
 
     const storageLogin = localStorage.getItem('id');
 
@@ -37,14 +44,20 @@ export async function init() {
         state.btnLogin.addEventListener('click', handleBtnLoginClick);
         state.dropdownMenu.style.display = "none";
     }
+
 }
 
 function handleBtnLoginClick() {
     location.href = "login.html";
 }
 
+function handleBtnProfileClick() {
+    location.href = "profile.html";
+}
+
 function handleBtnLogoutClick() {
     localStorage.removeItem('id');
+    location.href = "index.html";
 }
 
 export async function replaceButton(id) {
