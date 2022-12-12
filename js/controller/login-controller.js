@@ -1,6 +1,5 @@
 import * as pageController from './page-controller.js';
 import * as loginSevice from '../services/login-service.js';
-import * as authController from './authentication-controller.js';
 
 function UserLogin(email, password) {
     this.id = null;

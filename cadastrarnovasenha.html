@@ -15,9 +15,9 @@
       href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilos.css">
 
-    <title>JDKClean :: Login</title>
+    <title>JDKClean :: Cadastrar nova senha</title>
   </head>
 
   <body>
@@ -25,97 +25,78 @@
     <div class="d-flex flex-column wrapper">
 
       <nav
-      class="navbar navbar-expand-lg navbar-dark border-bottom shadow-sm"
-    >
-      <div class="container">
-
-        <a class="navbar-brand text-dark fw-lighter fs-3" href="#"><b>JDKClean</b></a>
-
-        <button
-          class="navbar-toggler bg-dark"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target=".navbar-collapse"
-        >
-
-          <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="/index.html"
-                >Principal</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="/contato.html">Contato</a>
-            </li>
-          </ul>
-  
-          <div class="align-self-end">
-            <ul class="navbar-nav">
+        class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#"><b>JDKClean</b></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav flex-grow-1">
               <li class="nav-item">
-                <a href="/cadastro.html" class="nav-link text-dark"
-                  >Quero me cadastrar</a
+                <a class="nav-link text-white" href="/catalogo.html"
+                  >Principal</a
                 >
               </li>
               <li class="nav-item">
-                <a href="/login.html" class="nav-link text-dark">Entrar</a>
-              </li>
-              <li class="nav-item">
-                <span
-                  class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
-                  title="5 produtos(s) no carrinho"
-                >
-                  <small>5</small>
-                </span>
-                <a href="/carrinho.html" class="nav-link text-dark">
-                  <i
-                    class="bi-cart"
-                    style="font-size: 24px; line-height: 24px"
-                  ></i>
-                </a>
+                <a class="nav-link text-white" href="/contato.html">Contato</a>
               </li>
             </ul>
+
+            <div class="align-self-end">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="/cadastro.html" class="nav-link text-white"
+                    >Quero me cadastrar</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="/login.html" class="nav-link text-white">Entrar</a>
+                </li>
+                <li class="nav-item">
+                  <span
+                    class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                    title="5 produtos(s) no carrinho"
+                  >
+                    <small>5</small>
+                  </span>
+                  <a href="/carrinho.html" class="nav-link text-white">
+                    <i
+                      class="bi-cart"
+                      style="font-size: 24px; line-height: 24px"
+                    ></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
       </nav>
 
       <main class="flex-fill">
         <div class="container">
           <div class="row justify-content-center">
             <form class="col-sm-10 col-md-8 col-lg-6">
-              <h1>Identifique-se, por favor</h1>
-  
+              <h1>Digite sua nova senha</h1>
+
               <div class="form-floating mb-3">
-                <input type="email" id="txtEmail" class="form-control" placeholder=" " name="txtEmail" autofocus >
-                <label for="txtEmail">E-mail</label>
+                <input type="password" id="txtSenha" class="form-control" placeholder=" " name="txtSenha" autofocus >
+                <label for="txtSenha">Nova Senha</label>
               </div>
 
               <div class="form-floating mb-3">
                 <input type="password" id="txtSenha" class="form-control" placeholder=" " name="txtSenha" >
-                <label for="txtSenha">Senha</label>
-              </div>
-
-              <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" value="" id="chkLembrar">
-                <label for="chkLembrar" class="form-check-label">Lembrar de mim</label>
+                <label for="txtSenha">Confirme a Nova Senha</label>
               </div>
   
-              <button type="button" onclick="window.location.href='/cliente_pedidos.html'"
-                class="btn btn-lg btn-danger">Entrar</button>
-  
-              <p class="mt-3">
-                Ainda não é cadastrado? <a href="/cadastro.html">Clique aqui</a>
-                  para se cadastrar.
-              </p>
-
-              <p class="mt-3">
-                Esqueceu sua senha? <a href="/recuperarsenha.html"> Clique aqui</a> para recuperá-la.
-              </p>
+              <button type="button" onclick="window.location.href='/confirmcadastrosenha.html'"
+                class="btn btn-lg btn-danger">Cadastrar Nova Senha</button>
 
             </form>
           </div>

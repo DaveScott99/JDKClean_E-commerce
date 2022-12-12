@@ -5,4 +5,6 @@ export default function User(name, email, password, phone) {
     this.password = password;
     this.phone = phone;
 
+    this.products = [];
+    
 }

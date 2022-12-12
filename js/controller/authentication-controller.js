@@ -42,7 +42,7 @@ function btnLoginState() {
     }
     else {
         state.btnLogin.addEventListener('click', handleBtnLoginClick);
-        state.dropdownMenu.style.display = "none";
+
     }
 
 }
