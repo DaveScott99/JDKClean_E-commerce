@@ -1,4 +1,9 @@
 const productContainer = document.querySelector('.card-wrapper');
+const modal = document.getElementById('modal-product');
+
+const select = (element) => document.querySelector(element);
+
+
 
 function State() {
 
@@ -18,17 +23,39 @@ export function init() {
 
     state.order = document.querySelector('.order');
 
+    changeQuantity();
+
 }
 
-function handleBtnPurchaseClick() {
-    console.log("CLICOU");
-    state.order.innerHTML = 1;
+const formatCurrency = (value) => {
+    return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})
 }
 
-function addCart(product) {
-    state.cart.push(product);
-    console.log(state.cart);
-    state.order.innerHTML = state.cart.length;
+let quantityItens = 1;
+
+const changeQuantity = () => {
+    select('.product-info--qtmais').addEventListener('click', () => {
+        quantityItens++;
+        select('.product-info--qt').innerHTML = quantityItens;
+    })
+
+    select('.product-info--qtmenos').addEventListener('click', () => {
+        if(quantityItens > 1) {
+            quantityItens--;
+            select('.product-info--qt').innerHTML = quantityItens;
+        }
+    })
+}
+
+select('.card-item').addEventListener('click', handleOpenModalClick);
+
+function handleOpenModalClick() {
+    modal.classList.add('hide');
+    modal.addEventListener('click', (event) => {
+        if (event.target.id == 'modal-product' || event.target.className == 'close-modal') {
+            modal.classList.remove('hide');
+        }
+    })
 }
 
 export const getAllProducts = async () => {
@@ -39,6 +66,15 @@ export const getAllProducts = async () => {
 
         const cardItem = document.createElement('article');
         cardItem.classList.add('card-item');
+        cardItem.addEventListener('click', () => {
+            console.log(quantityItens)
+            quantityItens = 1;
+            handleOpenModalClick()
+            select('.product-image img').src = product.imgUrl;
+            select('.product-info h1').innerHTML = product.name;
+            select('.product-info--actualPrice').innerHTML = formatCurrency(product.price);
+
+        });
 
         const cardImage = document.createElement('div');
         cardImage.classList.add('card-image');
@@ -72,4 +108,5 @@ export const getAllProducts = async () => {
         productContainer.appendChild(cardItem);
 
     })
+
 }
