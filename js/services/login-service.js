@@ -2,17 +2,15 @@ import * as userService from './user-service.js'
 
 export async function validateUser(userLogin) {
 
-    const result = await userService.getAllUsers();
+    const login = await userService.login(userLogin);
 
-    var validate = false;
+    console.log(login);
 
-    for (var i = 0; i < result.length; i++) {
-        if (userLogin.email === result[i].email && userLogin.password === result[i].password) {
-            userLogin.id = result[i].id
-            validate = true;
-        }
+    if (login == null) {
+        return false;
     }
-    return validate;
+
+    return true;
 }
 
 export function getErrors(user) {

@@ -5,6 +5,23 @@ export async function getUserById(id) {
     return data;
 }
 
+export async function login(login) {
+
+    const APIResponse = await fetch(`http://localhost:8080/login`, {
+        method: "POST",
+        body: JSON.stringify(login),
+        headers: {"Content-type": "application/json; charset=UTF-8"}
+    })
+
+    const data = await APIResponse.json();
+
+    const result = data.map((obj) => {
+        id: obj.id;
+    })
+
+    return result;
+}
+
 export async function getAllUsers() {
 
     const APIResponse = await fetch(`http://localhost:8080/users/`)

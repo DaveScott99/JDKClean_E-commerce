@@ -2,7 +2,6 @@ import * as pageController from './page-controller.js';
 import * as loginSevice from '../services/login-service.js';
 
 function UserLogin(email, password) {
-    this.id = null;
     this.email = email;
     this.password = password;
 }
@@ -69,9 +68,7 @@ async function handleBtnLoginClick(event) {
         const validateUser = await loginSevice.validateUser(state.userLogin);
         if (validateUser) {
             state.errorLogin.style.display = "none";
-            const id = 'id'
-            localStorage.setItem(id, JSON.stringify(state.userLogin.id));
-            location.href = 'index.html'
+            console.log(validateUser)
         }
         else {
             state.errorLogin.style.display = "block";
