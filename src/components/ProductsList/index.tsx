@@ -8,12 +8,10 @@ type Props = {
 
 export const ProductsList = ({ products }: Props) => {
     return (
-        <div className="orders-list-container">
-            <div className='orders-list-items'>
-                {products.map(product => (
-                    <ProductCard key={product.id} product={product} />
-                ))}
-            </div>
+        <div className='card-wrapper'>
+            {products.map(product => (
+                <ProductCard key={product.id} product={product} />
+            ))}
         </div>
     )
 }

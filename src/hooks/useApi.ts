@@ -1,7 +1,14 @@
 import axios from "axios"
 
-const API_URL = 'http://localhost:8080';
+const api = axios.create({
+    baseURL: process.env.REACT_APP_API_URL
+});
 
-export const fetchProducts = () => {
-    return axios(`${API_URL}/products?page=0&linesPerPage=12&direction=ASC&orderBy=id`)
-}
+export const useApi = () => ({
+
+    products: async () => {
+        const response = await api.get('/products?page=0&linesPerPage=12&direction=ASC&orderBy=id');
+        return response.data;
+    }
+
+})
