@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 export const Footer = () => {
   return (
-    <footer className="border-top text-muted bg-light">
+    <footer className="border-top bg-light">
       <div className="container">
         <div className="row py-3">
           <div className="col-12 col-md-4 text-center">
@@ -12,39 +13,37 @@ export const Footer = () => {
             CNPJ 48.512.272/0001-05
           </div>
           <div className="col-12 col-md-4 text-center">
-            <a
-              href="/privacidade"
+            <Link to="/privacy"
               className="text-decoration-none text-dark"
             >
-              Política de Privacidade{" "}
-            </a>
+              Política de Privacidade
+            </Link>
             <br />
-            <a href="/termos" className="text-decoration-none text-dark">
-              Termos de Uso{" "}
-            </a>
+            <Link to="/terms" className="text-decoration-none text-dark">
+              Termos de Uso
+            </Link>
             <br />
-            <a
-              href="/quemsomos"
+            <Link to="/aboutus"
               className="text-decoration-none text-dark"
             >
-              Quem Somos{" "}
-            </a>
+              Quem Somos
+            </Link>
             <br />
-            <a href="/trocas" className="text-decoration-none text-dark">
+            <Link to="/exchangesAndReturns" className="text-decoration-none text-dark">
               Trocas e Devoluções
-            </a>
+            </Link>
           </div>
           <div className="col-12 col-md-4 text-center">
-            <a href="/contato" className="text-decoration-none text-dark">
-              Contato pelo site{" "}
-            </a>
+            <Link to="/contact" className="text-decoration-none text-dark">
+              Contato pelo site
+            </Link>
             <br />
-            E-mail:
+            E-mail: 
             <a
               href="mailto:email@dominio.com"
               className="text-decoration-none text-dark"
             >
-              email@dominio.com{" "}
+              email@dominio.com
             </a>
             <br />
             Telefone:

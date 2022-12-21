@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 export const Login = () => {
@@ -26,12 +27,12 @@ export const Login = () => {
                         <button type="button" className="btn btn-lg btn-primary">Entrar</button>
             
                         <p className="mt-3">
-                            Ainda não é cadastrado? <a href="/cadastro.html">Clique aqui</a>
+                            Ainda não é cadastrado? <Link to="/registry">Clique aqui</Link>
                             para se cadastrar.
                         </p>
 
                         <p className="mt-3">
-                            Esqueceu sua senha? <a href="/recuperarsenha.html"> Clique aqui</a> para recuperá-la.
+                            Esqueceu sua senha? <Link to="/recoverPassword"> Clique aqui</Link> para recuperá-la.
                         </p>
                     </form>
                 </div>

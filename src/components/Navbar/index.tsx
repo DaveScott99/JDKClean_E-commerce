@@ -5,9 +5,9 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark border-bottom shadow-sm mb-3">
       <div className="container">
-        <a className="navbar-brand text-dark fw-lighter fs-3" href="/">
+        <Link to="/" className="navbar-brand text-dark fw-lighter fs-3">
           <b>JDKClean</b>
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler bg-dark"
@@ -21,39 +21,39 @@ export default function Navbar() {
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav flex-grow-1">
             <li className="nav-item">
-              <a className="nav-link text-dark" href="/catalog">
-                Principal
-              </a>
+              <Link to="/catalog" className="nav-link text-dark">
+                Catálogo
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-dark" href="/contato">
+              <Link to="/contact" className="nav-link text-dark">
                 Contato
-              </a>
+              </Link>
             </li>
           </ul>
 
           <div className="align-self-end">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a href="/registry" className="nav-link text-dark">
+                <Link to="/registry" className="nav-link text-dark">
                   Quero me cadastrar
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="/login" className="nav-link text-dark">
+                <Link to="/login" className="nav-link text-dark">
                   Entrar
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <span
                   className="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
                   title="5 produtos(s) no carrinho"
                 >
-                  <small>5</small>
+                  <small>0</small>
                 </span>
-                <a href="/carrinho" className="nav-link text-dark">
+                <Link to="/carrinho" className="nav-link text-dark">
                   <i className="bi-cart"></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
