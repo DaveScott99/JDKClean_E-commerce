@@ -7,7 +7,7 @@ export const Login = () => {
             <div className="container">
                 <div className="row justify-content-center">
                     <form className="col-sm-10 col-md-8 col-lg-6">
-                        <h1>Identifique-se, por favor</h1>
+                        <h1>Entrar</h1>
             
                         <div className="form-floating mb-3">
                             <input type="email" id="txtEmail" className="form-control" placeholder=" " name="txtEmail" autoFocus />
