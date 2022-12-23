@@ -1,0 +1,28 @@
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  justify-items: center;
+  padding: 20px;
+}
+
+.card-item {
+  padding: 10px;
+  border-radius: 5px;
+  transition: .3s ease;
+  cursor: pointer;
+  color: #000;
+}
+
+.card-item:hover {
+  background: #f3f3f3;
+}
+
+.card-image img {
+  width: 250px;
+}
+
+.card-content {
+  margin-top: 15px;
+}
