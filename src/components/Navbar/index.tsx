@@ -8,7 +8,6 @@ export default function Navbar() {
         <Link to="/" className="navbar-brand text-dark fw-lighter fs-3">
           <b>JDKClean</b>
         </Link>
-
         <button
           className="navbar-toggler bg-dark"
           type="button"
@@ -35,13 +34,8 @@ export default function Navbar() {
           <div className="align-self-end">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="/registry" className="nav-link text-dark">
-                  Quero me cadastrar
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/login" className="nav-link text-dark">
-                  Entrar
+                <Link to="/notlogged" className="nav-link text-dark">
+                  Conta
                 </Link>
               </li>
               <li className="nav-item">

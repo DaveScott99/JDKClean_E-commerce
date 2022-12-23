@@ -1,3 +1,4 @@
+import { Link, useParams } from "react-router-dom";
 import { Product } from "../../types/Product";
 
 type Props = {
@@ -15,15 +16,24 @@ function formatPrice(price: number) {
 }
 
 export const ProductCard = ({ product }: Props) => {
+
+  const handleClickProduct = () => {
+    console.log(product);
+  }
+
   return (
-        <div className="card-item">
-          <div className="card-image">
-            <img src={product.imgUrl} alt="product" className="img-thumbnail" />
-          </div>
-          <div className="card-content">
-            <p className="fs-6 fw-light">{product.name}</p>
-            <p className="fs-5 fw-bold">{formatPrice(product.price)}</p>
-          </div>
+    <>
+    <Link to={`/productpage/${product.id}`} onClick={() => handleClickProduct()}>
+      <div className="card-item">
+        <div className="card-image">
+          <img src={product.imgUrl} alt="product" className="img-thumbnail" />
         </div>
+        <div className="card-content">
+          <p className="fs-6 fw-light">{product.name}</p>
+          <p className="fs-5 fw-bold">{formatPrice(product.price)}</p>
+        </div>
+      </div>
+    </Link>
+    </>
   );
 };

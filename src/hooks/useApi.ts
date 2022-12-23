@@ -9,6 +9,11 @@ export const useApi = () => ({
     products: async () => {
         const response = await api.get('/products?page=0&linesPerPage=12&direction=ASC&orderBy=id');
         return response.data;
-    }
+    },
+
+   productById: async (id: number | null) => {
+        const response = await api.get(`/products/${id}`);
+        return response.data;
+   }
 
 })

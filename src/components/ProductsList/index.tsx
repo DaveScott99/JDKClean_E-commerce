@@ -8,7 +8,7 @@ type Props = {
 
 export const ProductsList = ({ products }: Props) => {
     return (
-        <div className='card-wrapper'>
+        <div className='card-wrapper' >
             {products.map(product => (
                 <ProductCard key={product.id} product={product} />
             ))}
