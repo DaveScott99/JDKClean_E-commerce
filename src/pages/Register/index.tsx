@@ -1,17 +1,19 @@
 import { ChangeEvent, useCallback, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useApi } from "../../hooks/useApi";
 import { UserRegistry } from "../../types/User";
 
 export const Register = () => {
+  const navigate = useNavigate();
+
   const [userRegistry, setUserRegistry] = useState<UserRegistry>({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
     roles: {
-        id: 1
-    }
+      id: 1,
+    },
   });
 
   function onChange(event: ChangeEvent<HTMLInputElement>) {
@@ -21,20 +23,23 @@ export const Register = () => {
 
   const api = useApi();
 
-  const handleSubmit = useCallback((event: React.FormEvent<HTMLFormElement> ) => {
-    event.preventDefault();
+  const handleSubmit = useCallback(
+    (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
 
-    const { firstName, lastName, email, password } = userRegistry;
+      const { firstName, lastName, email, password } = userRegistry;
 
-    if(!firstName || !lastName || !email || !password) {
+      if (!firstName || !lastName || !email || !password) {
         // TRATAR MESSANGEM DE ERRO
         window.alert("Preencha todos os campos");
-    }
-    
-    api.registry(userRegistry);
-    console.log("Registrou")
+      }
 
-  }, [api, userRegistry]);
+      api.registry(userRegistry);
+      navigate("/");
+      console.log("Registrou");
+    },
+    [api, userRegistry]
+  );
 
   return (
     <section id="form-section" className="form-container flex-fill">

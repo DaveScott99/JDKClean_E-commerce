@@ -1,7 +1,17 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/Auth/AuthContext";
 import "./styles.css";
 
 export default function Navbar() {
+  const auth = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await auth.signout();
+    navigate("/");
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark border-bottom shadow-sm mb-3">
       <div className="container">
@@ -34,9 +44,26 @@ export default function Navbar() {
           <div className="align-self-end">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="/notlogged" className="nav-link text-dark">
-                  Conta
-                </Link>
+                {auth.user ? (
+                  <Link to="/dashboard" className="nav-link text-dark">
+                    Olá, {auth.user.firstName}
+                  </Link>
+                ) : (
+                  <Link to="/notlogged" className="nav-link text-dark">
+                    Conta
+                  </Link>
+                )}
+              </li>
+              <li className="nav-item">
+                {auth.user && (
+                  <Link
+                    to="/"
+                    className="nav-link text-dark"
+                    onClick={handleLogout}
+                  >
+                    Sair
+                  </Link>
+                )}
               </li>
               <li className="nav-item">
                 <span
