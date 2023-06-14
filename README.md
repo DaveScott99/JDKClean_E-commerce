@@ -6,6 +6,8 @@ JDKClean é uma loja de produtos de limpeza do meu pai, e este projeto foi pensa
 
 Este repositório é apenas a parte Front-end do projeto sendo assim tendo outro repositório para o Back-end.
 
+- Link do projeto: https://jdk-clean-e-commerce.vercel.app/
+
 ## Layout Web
 
 ![tela_principal](https://github.com/DaveScott99/JDKClean_E-commerce/assets/101915085/fc339d02-4c3b-4233-bd83-3addae2a416e)
