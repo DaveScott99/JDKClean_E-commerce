@@ -8,6 +8,15 @@ Este repositório é apenas a parte Front-end do projeto sendo assim tendo outro
 
 - Link do projeto: https://jdk-clean-e-commerce.vercel.app/
 
+## Tecnologias utilizadas
+
+### Front end
+
+- `HTML5`
+- `Bootstrap`
+- `React JS`
+- `TypeScipt`
+
 ## Layout Web
 
 ![tela_principal](https://github.com/DaveScott99/JDKClean_E-commerce/assets/101915085/fc339d02-4c3b-4233-bd83-3addae2a416e)
@@ -15,15 +24,6 @@ Este repositório é apenas a parte Front-end do projeto sendo assim tendo outro
 ![catalogo](https://github.com/DaveScott99/JDKClean_E-commerce/assets/101915085/b169b868-6cff-4bf6-bb6e-bdded9f5e2b3)
 
 ![autenticacao](https://github.com/DaveScott99/JDKClean_E-commerce/assets/101915085/bd90abbd-b644-440c-b1b0-72901c328795)
-
-## Tecnologias utilizadas
-
-### Front end
-
-- HTML5
-- Bootstrap
-- React JS
-- TypeScipt
 
 ## Autor
 
