@@ -6,12 +6,14 @@ type Props = {
     products: Product[];
 }
 
-export const ProductsList = ({ products }: Props) => {
+export const ProductsList = () => {
     return (
         <div className='card-wrapper' >
-            {products.map(product => (
-                <ProductCard key={product.id} product={product} />
-            ))}
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
         </div>
     )
 }

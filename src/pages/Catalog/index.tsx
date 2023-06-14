@@ -6,6 +6,8 @@ import { SearchAndOrder } from "../../components/SearchAndOrder";
 import { Pagination } from "../../components/Pagination";
 
 export const Catalog = () => {
+
+  /*
   const [products, setProducts] = useState<Product[]>([]);
   const api = useApi();
 
@@ -16,12 +18,13 @@ export const Catalog = () => {
     };
     listProducts();
   }, []);
+  */
 
   return (
     <main className="flex-fill">
       <div className="container">
         <SearchAndOrder />
-        <ProductsList products={products} />
+        <ProductsList />
         <Pagination />
       </div>
     </main>

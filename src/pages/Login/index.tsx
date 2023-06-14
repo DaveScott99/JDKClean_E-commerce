@@ -4,6 +4,7 @@ import { AuthContext } from "../../contexts/Auth/AuthContext";
 import "./styles.css";
 
 export const Login = () => {
+  
   const auth = useContext(AuthContext);
   const navigate = useNavigate();
 
