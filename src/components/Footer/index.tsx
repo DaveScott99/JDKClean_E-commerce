@@ -9,8 +9,8 @@ export const Footer = () => {
           <div className="col-12 col-md-4 text-center">
             &copy; 2022 - JDKClean Produtos de limpeza
             <br />
-            Rua Francisco de Góes Araújo, 175, São Paulo/SP <br />
-            CNPJ 48.512.272/0001-05
+            Rua Da Alegria <br />
+            CNPJ 99.999.999/000-00
           </div>
           <div className="col-12 col-md-4 text-center">
             <Link to="/privacy"
@@ -51,7 +51,7 @@ export const Footer = () => {
               href="phone:9999999999"
               className="text-decoration-none text-dark"
             >
-              (11) 96018-1150
+              (99) 99999-9999
             </a>
           </div>
         </div>
